@@ -1,0 +1,21 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+    },
+    "last.imagePath": "E:/GameAssets/Modern_Office_Revamped/2_Modern_Office_Black_Shadow",
+    "map.fixedSize": false,
+    "map.height": 23,
+    "map.width": 40,
+    "openFiles": [
+    ],
+    "project": "ftp_office.tiled-project",
+    "recentFiles": [
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}
