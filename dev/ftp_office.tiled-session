@@ -5,6 +5,7 @@
     },
     "activeFile": "floor.tmx",
     "expandedProjectPaths": [
+        "tilemaps",
         "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -13,8 +14,8 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 119.5,
-                "y": 192
+                "x": -131.5,
+                "y": 144.5
             }
         },
         "floor.tmx#Room_Builder_Office_32x32": {

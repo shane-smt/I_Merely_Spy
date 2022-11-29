@@ -1,5 +1,5 @@
 import pygame
-from settings import TILESIZE, TEST_MAP
+from settings import TILESIZE, TEST_MAP1
 from tile import Tile
 from player import Player
 
@@ -17,7 +17,7 @@ class Level:
 
     def build_map(self):
 
-        for row_index, row in enumerate(TEST_MAP):
+        for row_index, row in enumerate(TEST_MAP1):
             for col_index, col in enumerate(row):
                 x = col_index * TILESIZE
                 y = row_index * TILESIZE
@@ -41,12 +41,18 @@ class YSortCamGroup(pygame.sprite.Group):
         self.half_height = self.display_surface.get_size()[1] // 2
         self.cam_offset = pygame.math.Vector2()
 
+        self.floor_surf = pygame.image.load('../graphics/tilemap/floor.png').convert()
+        self.floor_rect = self.floor_surf.get_rect(topleft=(0, 0))
+
     def custom_draw(self, player):
         """Custom draw replaces the inbuilt draw method from the sprite.sprite.Group class. The changes allow for
         perspective changes such as being behind or in front of objects. This also implements a camera to the class
         allowing the player to always be centered as they move about the level """
         self.cam_offset.x = player.rect.centerx - self.half_width
         self.cam_offset.y = player.rect.centery - self.half_height
+
+        floor_offset_pos = self.floor_rect.topleft - self.cam_offset
+        self.display_surface.blit(self.floor_surf, floor_offset_pos)
 
         for sprite in sorted(self.sprites(), key=lambda sprite: sprite.rect.centery):
             offset_position = sprite.rect.topleft - self.cam_offset

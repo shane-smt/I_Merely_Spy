@@ -10,7 +10,7 @@ class Game:
 
         # General Setup
         pygame.init()
-        self.screen = pygame.display.set_mode((settings.WIDTH, settings.HEIGTH))
+        self.screen = pygame.display.set_mode((settings.WIDTH, settings.HEIGHT))
         pygame.display.set_caption('I Merely Spy')
         self.clock = pygame.time.Clock()
         self.level = Level()
