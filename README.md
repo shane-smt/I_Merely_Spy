@@ -82,7 +82,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Install required modules
   ```sh
-  pip install -r requirments.txt
+  pip install -r requirements.txt
   ```
 
 

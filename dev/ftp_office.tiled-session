@@ -3,19 +3,48 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "floor.tmx",
     "expandedProjectPaths": [
+        "."
     ],
+    "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "floor.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 119.5,
+                "y": 192
+            }
+        },
+        "floor.tmx#Room_Builder_Office_32x32": {
+            "scaleInDock": 1
+        },
+        "tilemaps/Modern_Office_Black_Shadow_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilemaps/Room_Builder_Office_32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
     },
-    "last.imagePath": "E:/GameAssets/Modern_Office_Revamped/2_Modern_Office_Black_Shadow",
+    "last.externalTilesetPath": "D:/PyCharm Projects/I_Merely_Spy/dev/tilemaps",
+    "last.imagePath": "D:/PyCharm Projects/I_Merely_Spy/dev/tilemaps/Modern_Office_Revamped/1_Room_Builder_Office",
     "map.fixedSize": false,
     "map.height": 23,
+    "map.lastUsedFormat": "tmx",
     "map.width": 40,
     "openFiles": [
+        "floor.tmx",
+        "tilemaps/Room_Builder_Office_32x32.tsx"
     ],
     "project": "ftp_office.tiled-project",
     "recentFiles": [
+        "tilemaps/Room_Builder_Office_32x32.tsx",
+        "floor.tmx",
+        "tilemaps/Modern_Office_Black_Shadow_32x32.tsx"
     ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
     "tileset.lastUsedFormat": "tsx"
 }
