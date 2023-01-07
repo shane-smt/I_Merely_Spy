@@ -1,7 +1,8 @@
 import pygame
-from settings import TILESIZE, TEST_MAP1
+from settings import TILESIZE
 from tile import Tile
 from player import Player
+from utilities import import_csv_layout
 
 
 class Level:
@@ -16,15 +17,22 @@ class Level:
         self.build_map()
 
     def build_map(self):
+        layout = {"boundry": import_csv_layout("../map/Boundry.csv"),
+                  "walls": import_csv_layout("../map/Walls.csv"),
+                  "wallover": import_csv_layout("../map/Wallover.csv"),
+                  "entities": import_csv_layout("../map/Entities.csv"),
+                  "surfaces": import_csv_layout("../map/Surfaces.csv"),
+                  "objects": import_csv_layout("../map/Objects.csv")}
 
-        for row_index, row in enumerate(TEST_MAP1):
-            for col_index, col in enumerate(row):
-                x = col_index * TILESIZE
-                y = row_index * TILESIZE
-                if col == "-":
-                    Tile((x, y), (self.visible_sprites, self.obstacles_sprites))
-                if col == "p":
-                    self.player = Player((x, y), (self.visible_sprites), self.obstacles_sprites)  # noqa
+        for style, layout in layout.items():
+            for row_index, row in enumerate(layout):
+                for col_index, col in enumerate(row):
+                    if col != "-1":
+                        x = col_index * TILESIZE
+                        y = row_index * TILESIZE
+                        if style == "boundry":
+                            Tile((x, y), [self.obstacles_sprites], "invisible")  # noqa
+        self.player = Player((x-100, y-100), (self.visible_sprites), self.obstacles_sprites)  # noqa
 
     def run(self):
         # Update and Draw all Level Elements
