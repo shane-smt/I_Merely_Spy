@@ -19,8 +19,9 @@ class Level:
     def build_map(self):
         layout = {"boundry": import_csv_layout("../map/Boundry.csv"),
                   "walls": import_csv_layout("../map/Walls.csv"),
-                  "wallover": import_csv_layout("../map/Wallover.csv"),
+                  "walls2": import_csv_layout("../map/Walls2.csv"),
                   "entities": import_csv_layout("../map/Entities.csv"),
+                  "dividers": import_csv_layout("../map/Dividers.csv"),
                   "surfaces": import_csv_layout("../map/Surfaces.csv"),
                   "objects": import_csv_layout("../map/Objects.csv")}
 
@@ -32,7 +33,7 @@ class Level:
                         y = row_index * TILESIZE
                         if style == "boundry":
                             Tile((x, y), [self.obstacles_sprites], "invisible")  # noqa
-        self.player = Player((x-100, y-100), (self.visible_sprites), self.obstacles_sprites)  # noqa
+        self.player = Player((x-100, y-50), (self.visible_sprites), self.obstacles_sprites)  # noqa
 
     def run(self):
         # Update and Draw all Level Elements
